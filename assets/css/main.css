@@ -1676,7 +1676,7 @@ input, select, textarea {
 		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
-		color: #fff !important;
+		color: #fffafa !important;
 		text-decoration: none;
 		font-weight: 700;
 		border: 0;
@@ -1686,7 +1686,7 @@ input, select, textarea {
 		text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
 		overflow: hidden;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
-		background-color: #43B3E0;
+		background-color: #000000;
 		padding: 1em 2.35em 1em 2.35em;
 		font-size: 1.1em;
 		max-width: 24em;
@@ -1697,7 +1697,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #43bff0;
+			background-color: #3BA8D3;
 			color: #fff !important;
 		}
 
@@ -1804,9 +1804,10 @@ input, select, textarea {
 					-webkit-transition: background-color .2s ease-in-out;
 					-ms-transition: background-color .2s ease-in-out;
 					transition: background-color .2s ease-in-out;
-					background-color: #444;
+					background-color: #fffbfb;
 					border-radius: 6px;
-					box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
+					background-color: #ffffff;
+					box-shadow: inset 0px 0px 0px 1px #ffffff, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
 					color: #2E2E2E !important;
 					display: block;
 					font-size: 26px;
@@ -1888,7 +1889,7 @@ input, select, textarea {
 				}
 
 					ul.social li a:hover:before {
-						background-color: transparent;
+						background-color: #3BA8D3;
 					}
 
 /* Actions */
@@ -1911,14 +1912,41 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		background: #fff;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 		text-align: center;
+		height: 500px; /* Set a fixed height */
 		padding: 2em;
+		background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+		background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+		background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+		background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+		transition: box-shadow 0.1s ease-in-out, background-color 0.1s ease-in-out, transform 0.1s ease-in-out, color 0.1s ease-in-out;
+		color: inherit;
+		color: #000000 !important;
+
+	}
+
+	.box-link {
+		text-decoration: none;
+		display: block;
+		color: inherit; /* Ensure the text color is inherited */
+	}
+
+	.box:hover {
+			box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
+			background-color: #3BA8D3;
+			transform: translateY(-5px);
+			color: #fff; /* Change color on hover */
 	}
 
 		.box.style1 {
 			padding: 3em 2em 3.5em 2em;
+		}
+
+		/* Ensure the heading color changes on hover */
+		.box:hover h3,
+		.box:hover p {
+			color: #fff; /* Change color on hover */
 		}
 
 			.box.style1 h3 {
@@ -1936,6 +1964,8 @@ input, select, textarea {
 			margin: -4em 0 4em -4em;
 			width: auto;
 		}
+
+
 
 /* Icons */
 
@@ -1974,7 +2004,7 @@ input, select, textarea {
 		}
 
 		.icon.featured {
-			color: #EA8A95;
+			color: #3BA8D3;
 			display: block;
 			margin: 0 0 1.5em 0;
 			cursor: default;
@@ -2066,7 +2096,7 @@ input, select, textarea {
 			transition: background-color .2s ease-in-out;
 			position: relative;
 			display: block;
-			color: #fff;
+			color: #000000;
 			text-decoration: none;
 			outline: 0;
 			font-weight: 600;
@@ -2135,6 +2165,82 @@ input, select, textarea {
 
 	#contact footer {
 		font-size: 0.9em;
+	}
+
+
+/* Timeline Styles */
+	.timeline {
+		position: relative;
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 2em 0;
+	}
+
+	.timeline::after {
+		content: '';
+		position: absolute;
+		width: 6px;
+		background-color: #000000;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		margin-left: -3px;
+	}
+
+	.timeline-item {
+		padding: 10px 40px;
+		position: relative;
+		background: #fff;
+		border-radius: 6px;
+		width: 50%;
+		box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	.timeline-item::after {
+		content: '';
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		right: -17px;
+		background-color: white;
+		border: 5px solid #000000;
+		top: 15px;
+		border-radius: 50%;
+		z-index: 1;
+	}
+
+	.timeline-item:nth-child(odd) {
+		left: 0;
+	}
+
+	.timeline-item:nth-child(even) {
+		left: 50%;
+	}
+
+	.timeline-item:nth-child(even)::after {
+		left: -16px;
+	}
+
+	.timeline-content {
+		padding: 20px 30px;
+		background: #fff;
+		position: relative;
+		border-radius: 6px;
+	}
+
+	.timeline-content h3 {
+		margin-top: 0;
+		color: #000000;
+	}
+
+	.timeline-content span {
+		font-size: 1em;
+		color: #000000;
+	}
+
+	.timeline-content p {
+		margin: 0.5em 0 0;
+		color: #000000;
 	}
 
 /* Copyright */
@@ -2443,3 +2549,4 @@ input, select, textarea {
 					}
 
 	}
+
