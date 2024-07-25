@@ -1672,7 +1672,7 @@ input, select, textarea {
 		-moz-transition: background-color .2s ease-in-out;
 		-webkit-transition: background-color .2s ease-in-out;
 		-ms-transition: background-color .2s ease-in-out;
-		transition: background-color .2s ease-in-out;
+		transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, color 0.3s ease-in-out;
 		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
@@ -1744,6 +1744,10 @@ input, select, textarea {
 			.button.alt:active {
 				background-color: #3f3f3f;
 			}
+		
+	.button:hover {
+		transform: translateY(-5px);
+	}
 
 /* List */
 
@@ -1889,7 +1893,7 @@ input, select, textarea {
 				}
 
 					ul.social li a:hover:before {
-						background-color: #3BA8D3;
+						background-color: #43B3E0;
 					}
 
 /* Actions */
@@ -1917,7 +1921,7 @@ input, select, textarea {
 		text-align: center;
 		height: 500px; /* Set a fixed height */
 		padding: 2em;
-		transition: box-shadow 0.1s ease-in-out, background-color 0.1s ease-in-out, transform 0.1s ease-in-out, color 0.1s ease-in-out;
+		transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, color 0.3s ease-in-out;
 		color: inherit;
 		color: #000000 !important;
 		border: 6px solid #000000;
@@ -1934,7 +1938,6 @@ input, select, textarea {
 			box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25), 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
 			background-color: #3BA8D3;
 			transform: translateY(-5px);
-			color: #fff; /* Change color on hover */
 	}
 
 		.box.style1 {
@@ -1962,7 +1965,6 @@ input, select, textarea {
 			margin: -4em 0 4em -4em;
 			width: auto;
 		}
-
 
 
 /* Icons */
@@ -2172,6 +2174,7 @@ input, select, textarea {
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 2em 0;
+		transition: box-shadow 0.4s ease-in-out, background-color 0.4s ease-in-out, transform 0.4s ease-in-out, color 0.4s ease-in-out;
 	}
 
 	.timeline::after {
@@ -2189,7 +2192,7 @@ input, select, textarea {
 		padding: 10px 40px;
 		position: relative;
 		background: #fff;
-		border-radius: 6px;
+		border-radius: 10px;
 		width: 50%;
 		box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 	}
@@ -2199,8 +2202,8 @@ input, select, textarea {
 		position: absolute;
 		width: 25px;
 		height: 25px;
-		right: -17px;
-		background-color: white;
+		right: -27px;
+		background-color: rgb(255, 255, 255);
 		border: 5px solid #000000;
 		top: 15px;
 		border-radius: 50%;
@@ -2216,12 +2219,12 @@ input, select, textarea {
 	}
 
 	.timeline-item:nth-child(even)::after {
-		left: -16px;
+		left: -27px;
 	}
 
 	.timeline-content {
 		padding: 20px 30px;
-		background: #fff;
+		background: #ffffff;
 		position: relative;
 		border-radius: 6px;
 	}
@@ -2240,6 +2243,16 @@ input, select, textarea {
 		margin: 0.5em 0 0;
 		color: #000000;
 	}
+
+	.timeline-item:hover {
+		background: #ffffff;
+		transform: translateY(-5px);
+		}
+
+
+	
+
+
 
 /* Copyright */
 
