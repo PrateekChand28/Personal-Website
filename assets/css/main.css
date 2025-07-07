@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 html,body {
+	overflow: hidden;
 	line-height: 1;
 }
 
